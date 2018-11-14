@@ -1,0 +1,44 @@
+body {
+    background-color: bisque;
+}
+
+h1 {
+    font-family: 'Bowlby One SC', cursive;
+}
+
+.container {
+    margin-top: 25px;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    font-size: 60px;
+}
+.row {
+    margin-top: 25px;
+}
+
+.titleDiv {
+    width: 100%;
+    text-align: center;
+}
+
+.navTitle {
+    font-size: 60px;
+}
+
+.navImage {
+    width: 100%;
+    text-align: center;
+}
+
+.enterBurgerText {
+    width: 100%;
+    text-align: center;
+}
+
+.addBugerBtnDiv {
+    width: 100%;
+    text-align: center;
+}

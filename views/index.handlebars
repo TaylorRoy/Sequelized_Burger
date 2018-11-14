@@ -1,0 +1,60 @@
+<div class="container">
+
+    <div class="form-group">
+        <label class="enterBurgerText" for="ca">
+            <h1>Enter a Burger You Want to Devour!</h1>
+        </label>
+        {{!-- <form action="/burgers/create" method="POST"></form> --}}
+        <input type="text" class="form-control" id="addBurger" name="burger_name" placeholder="Type dream burger here.">
+    </div> 
+    <div class="addBugerBtnDiv">
+        <button class="addBurgerBtn btn btn-primary" type="submit">Add Burger</button>
+    </div>
+    {{!-- </form> --}}
+
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="toDevourDiv">
+
+                <h1>Burgers to Devour</h1>
+
+                <ul>
+                    {{#each burger}}
+                    {{#unless this.devoured}}
+                    <li>
+                        <p>
+                            {{this.id}}. {{this.burger_name}}
+
+                            <button data-planid="{{this.id}}" class="devourBtn btn btn-success">Devour!!!</button>
+                        </p>
+                    </li>
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="alreadyDevouredDiv">
+
+                <h1>Devoured Burgers</h1>
+                <ul>
+                    {{#each burger}}
+                    {{#if this.devoured}}
+                    <li>
+                        <p>
+                            {{this.id}}. {{this.burger_name}}
+
+                            <button data-planid="{{this.id}}" class="delete btn btn-danger">Delete</button>
+                        </p>
+                    </li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
